@@ -1,19 +1,344 @@
 {
-    "posts": [
+    "item": [
         {
             "id": 1,
-            "title": "json-server",
-            "author": "typicode"
-        }
-    ],
-    "comments": [
+            "name": "Cherries",
+            "cost": 2.53,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
         {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
+            "id": 2,
+            "name": "Raspberries",
+            "cost": 2.29,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Blackberries",
+            "cost": 1.89,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Mango",
+            "cost": 1.27,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Apricots",
+            "cost": 1.27,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Figs",
+            "cost": 1.11,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Peach",
+            "cost": 1.07,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Kiwi",
+            "cost": 2.29,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Dates",
+            "cost": 2.29,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Fresh fruit",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Asparagus",
+            "cost": 2.47,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Artichokes",
+            "cost": 2.43,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Spinach",
+            "cost": 1.64,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Okra",
+            "cost": 1.90,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "name": "Cory",
+            "cost": 2.20,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "name": "Olives",
+            "cost": 1.10,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "name": "Acorn squash",
+            "cost": 1.00,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "name": "Brussels sprouts",
+            "cost": 0.95,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Vegetables",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "name": "Walnuts",
+            "cost": 13.99,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Nuts",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "name": "Almonds",
+            "cost": 9.99,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Nuts",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "name": "Pine nuts",
+            "cost": 30.00,
+            "departament": [
+                {
+                    "name": "Food",
+                    "identification": "Imported food"
+                }
+            ],
+            "category": [
+                {
+                    "name": "Nuts",
+                    "id": 3
+                }
+            ]
         }
-    ],
-    "profile": {
-        "name": "typicode"
-    }
+    ]
 }
