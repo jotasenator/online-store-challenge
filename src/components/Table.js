@@ -9,9 +9,11 @@ export default function Tabla() {
     const dispatch = useDispatch()
 
     useEffect(() => {
+
         dispatch(fetchData())
 
     }, [dispatch])
+
     const { data } = useSelector(state => state.axiosDataReducer)
 
     return (
