@@ -4,7 +4,7 @@
             "id": 1,
             "name": "Cherries",
             "cost": 2.53,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -21,7 +21,7 @@
             "id": 2,
             "name": "Raspberries",
             "cost": 2.29,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -38,7 +38,7 @@
             "id": 3,
             "name": "Blackberries",
             "cost": 1.89,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -55,7 +55,7 @@
             "id": 4,
             "name": "Mango",
             "cost": 1.27,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -72,7 +72,7 @@
             "id": 5,
             "name": "Apricots",
             "cost": 1.27,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -89,7 +89,7 @@
             "id": 6,
             "name": "Figs",
             "cost": 1.11,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -106,7 +106,7 @@
             "id": 7,
             "name": "Peach",
             "cost": 1.07,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -123,7 +123,7 @@
             "id": 8,
             "name": "Kiwi",
             "cost": 2.29,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -140,7 +140,7 @@
             "id": 9,
             "name": "Dates",
             "cost": 2.29,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -157,7 +157,7 @@
             "id": 10,
             "name": "Asparagus",
             "cost": 2.47,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -174,7 +174,7 @@
             "id": 11,
             "name": "Artichokes",
             "cost": 2.43,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -191,7 +191,7 @@
             "id": 12,
             "name": "Spinach",
             "cost": 1.64,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -208,7 +208,7 @@
             "id": 13,
             "name": "Okra",
             "cost": 1.90,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -225,7 +225,7 @@
             "id": 14,
             "name": "Cory",
             "cost": 2.20,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -242,7 +242,7 @@
             "id": 15,
             "name": "Olives",
             "cost": 1.10,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -259,7 +259,7 @@
             "id": 16,
             "name": "Acorn squash",
             "cost": 1.00,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -276,7 +276,7 @@
             "id": 17,
             "name": "Brussels sprouts",
             "cost": 0.95,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -293,7 +293,7 @@
             "id": 18,
             "name": "Walnuts",
             "cost": 13.99,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -310,7 +310,7 @@
             "id": 19,
             "name": "Almonds",
             "cost": 9.99,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
@@ -327,7 +327,7 @@
             "id": 20,
             "name": "Pine nuts",
             "cost": 30.00,
-            "departament": [
+            "department": [
                 {
                     "name": "Food",
                     "identification": "Imported food"
