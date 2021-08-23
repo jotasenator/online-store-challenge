@@ -1,15 +1,13 @@
 import React from 'react'
+import { deleteData } from '../../actions/actions'
 
-export default function ButtonDelete() {
+export default function ButtonDelete({ id }) {
 
-    const handleDelete = () => {
-        alert('Delete')
-    }
     return (
         <div>
             <button
                 className='btn btn-danger'
-                onClick={handleDelete}
+                onClick={deleteData(id)}
             >
                 Delete
             </button>

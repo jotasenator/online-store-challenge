@@ -26,14 +26,15 @@ export const fetchData = () => {
 //delete data
 export const deleteData = (id) => {
     return (dispatch) => {
-        return axios.delete(`${baseURL}${id}`)
+        return axios.get(`${baseURL}${id}`)
             .then(response => {
                 return response.data
             })
             .then(data => {
+                console.log(data)
                 dispatch({
-                    type: types.delete,
-                    data: data
+                    type: types.error,
+                    deletedItem: data
                 })
             })
             .catch(error => dispatch(
@@ -41,6 +42,7 @@ export const deleteData = (id) => {
                     type: types.error,
                     msg: "Unable to delete data"
                 }));
+
     };
 };
 //modify data

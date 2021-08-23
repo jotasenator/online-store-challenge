@@ -7,14 +7,15 @@ import ButtonUpdate from './buttons/ButtonUpdate';
 
 export default function Tabla() {
     const dispatch = useDispatch()
+    const { data } = useSelector(state => state.axiosDataReducer)
 
     useEffect(() => {
 
         dispatch(fetchData())
 
-    }, [dispatch])
 
-    const { data } = useSelector(state => state.axiosDataReducer)
+    }, [])
+
 
     return (
         <div className='container mt-5 mb-5'>
@@ -54,7 +55,7 @@ export default function Tabla() {
                                     }
                                 </th>
                                 <th><ButtonUpdate /></th>
-                                <th><ButtonDelete /></th>
+                                <th><ButtonDelete id={x.id} /></th>
                             </tr>
                         ))
                     }
