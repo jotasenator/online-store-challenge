@@ -12,6 +12,12 @@ th{
     border:1px solid grey;
     border-radius:5px;
     box-shadow: 5px 5px 1px grey;
+    min-width: fit-content;
 }
 
+.float-right{
+    float:right;
+    margin-top:-10px;
+    margin-right: 10px;
+}
 

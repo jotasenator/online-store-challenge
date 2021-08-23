@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../actions/actions';
+import ButtonCreate from './buttons/ButtonCreate';
+import ButtonDelete from './buttons/ButtonDelete';
+import ButtonUpdate from './buttons/ButtonUpdate';
 
 export default function Tabla() {
     const dispatch = useDispatch()
@@ -13,6 +16,7 @@ export default function Tabla() {
 
     return (
         <div className='container mt-5 mb-5'>
+            <ButtonCreate />
             <table className="table table-striped table-hover caption-top ">
                 <caption>Online Store</caption>
                 <thead className='table-dark'>
@@ -22,13 +26,15 @@ export default function Tabla() {
                         <th scope="col">Cost</th>
                         <th scope="col">Category</th>
                         <th scope="col">Department</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        data?.map(x => (
+                        data?.map((x, index) => (
                             <tr key={x.id}>
-                                <th scope="col">{x.id}</th>
+                                <th scope="col">{index + 1}</th>
                                 <th scope="col">{x.name}</th>
                                 <th scope="col">$ {x.cost.toFixed(2)}</th>
                                 <th className='text-center'>
@@ -45,6 +51,8 @@ export default function Tabla() {
                                         ))
                                     }
                                 </th>
+                                <th><ButtonUpdate /></th>
+                                <th><ButtonDelete /></th>
                             </tr>
                         ))
                     }
