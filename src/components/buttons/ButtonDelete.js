@@ -1,5 +1,5 @@
 import React from 'react'
-import { getItemDeleteGetData } from '../../actions/actions'
+import { getItemDeleteGetItems } from '../../actions/actions'
 import { useDispatch } from 'react-redux'
 
 export default function ButtonDelete({ id }) {
@@ -10,7 +10,7 @@ export default function ButtonDelete({ id }) {
         <div>
             <button
                 className='btn btn-danger'
-                onClick={() => dispatch(getItemDeleteGetData(id))}
+                onClick={() => dispatch(getItemDeleteGetItems(id))}
             >
                 Delete
             </button>

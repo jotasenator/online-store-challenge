@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../actions/actions';
+import { getItems } from '../actions/actions';
 import ButtonCreate from './buttons/ButtonCreate';
 import ButtonDelete from './buttons/ButtonDelete';
 import ButtonUpdate from './buttons/ButtonUpdate';
@@ -11,13 +11,10 @@ export default function Tabla() {
 
     useEffect(() => {
 
-        dispatch(fetchData())
+        dispatch(getItems())
 
 
     }, [dispatch])
-
-    console.log(data)
-
 
     return (
         <div className='container mt-5 mb-5'>

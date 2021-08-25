@@ -4,7 +4,7 @@ import { types } from '../types/types'
 
 
 // get data
-export const fetchData = () => {
+export const getItems = () => {
     return async (dispatch) => {
         try {
             const response = await axios.get(baseURL);
@@ -17,13 +17,15 @@ export const fetchData = () => {
             return dispatch(
                 {
                     type: types.error,
-                    msg: "Unable to fetch data"
+                    msg: "Unable to get items"
                 });
         }
     };
 };
+
+
 //delete data
-export const getItemDeleteGetData = (id) => {
+const selectItem = (id) => {
     return async (dispatch) => {
         try {
             const response = await axios.get(`${baseURL}${id}`);
@@ -36,9 +38,15 @@ export const getItemDeleteGetData = (id) => {
             return dispatch(
                 {
                     type: types.error,
-                    msg: "Unable to select data for delete"
+                    msg: "Unable to select item for delete"
                 });
         }
+    };
+}
+
+export const getItemDeleteGetItems = (id) => {
+    return async (dispatch) => {
+        dispatch(selectItem(id))
         try {
             await axios.delete(`${baseURL}${id}`);
 
@@ -46,9 +54,31 @@ export const getItemDeleteGetData = (id) => {
             return dispatch(
                 {
                     type: types.error,
-                    msg: "Unable to delete data"
+                    msg: "Unable to delete item"
                 });
         }
-        dispatch(fetchData())
+        dispatch(getItems())
+    };
+};
+
+
+//modify data
+export const modifyItem = (id, dataModified) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(`${baseURL}${id}`, dataModified);
+            const data = response.data;
+            dispatch({
+                type: types.modify,
+                modify: data
+            });
+        } catch (error) {
+            return dispatch(
+                {
+                    type: types.error,
+                    msg: "Unable to modify item"
+                });
+        }
+        dispatch(getItems())
     };
 };
