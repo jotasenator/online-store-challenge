@@ -3,6 +3,7 @@ import { types } from "../types/types";
 const initialState = {
     data: null,
     deleted: null,
+    modified: null,
     error: ''
 }
 
@@ -17,6 +18,11 @@ export const axiosDataReducer = (state = initialState, action) => {
             return {
                 ...state,
                 deleted: action.deletedItem
+            }
+        case types.modify:
+            return {
+                ...state,
+                modified: action.modifiedItem
             }
 
         case types.error:
