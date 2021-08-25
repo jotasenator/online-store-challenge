@@ -3,7 +3,7 @@ import { baseURL } from "../json-server/baseURL"
 import { types } from '../types/types'
 
 
-// get data
+// get items
 export const getItems = () => {
     return async (dispatch) => {
         try {
@@ -24,7 +24,7 @@ export const getItems = () => {
 };
 
 
-//delete data
+//delete item
 const selectItem = (id) => {
     return async (dispatch) => {
         try {
@@ -62,7 +62,29 @@ export const getItemDeleteGetItems = (id) => {
 };
 
 
-//modify data
+//modify item
+export const modifyItem = (id, dataModified) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(`${baseURL}${id}`, dataModified);
+            const data = response.data;
+            dispatch({
+                type: types.modify,
+                modify: data
+            });
+        } catch (error) {
+            return dispatch(
+                {
+                    type: types.error,
+                    msg: "Unable to modify item"
+                });
+        }
+        dispatch(getItems())
+    };
+};
+
+
+//create item
 export const modifyItem = (id, dataModified) => {
     return async (dispatch) => {
         try {
