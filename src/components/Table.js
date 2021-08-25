@@ -14,7 +14,9 @@ export default function Tabla() {
         dispatch(fetchData())
 
 
-    }, [])
+    }, [dispatch])
+
+    console.log(data)
 
 
     return (

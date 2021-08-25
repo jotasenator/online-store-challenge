@@ -5,89 +5,50 @@ import { types } from '../types/types'
 
 // get data
 export const fetchData = () => {
-    return (dispatch) => {
-        return axios.get(baseURL)
-            .then(response => {
-                return response.data
-            })
-            .then(data => {
-                dispatch({
-                    type: types.get,
-                    data: data
-                })
-            })
-            .catch(error => dispatch(
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(baseURL);
+            const data = response.data;
+            dispatch({
+                type: types.get,
+                data: data
+            });
+        } catch (error) {
+            return dispatch(
                 {
                     type: types.error,
                     msg: "Unable to fetch data"
-                }));
+                });
+        }
     };
 };
 //delete data
-export const deleteData = (id) => {
-    return (dispatch) => {
-        return axios.get(`${baseURL}${id}`)
-            .then(response => {
-                return response.data
-            })
-            .then(data => {
-                console.log(data)
-                dispatch({
+export const getItemDeleteGetData = (id) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(`${baseURL}${id}`);
+            const data = response.data;
+            dispatch({
+                type: types.delete,
+                deletedItem: data
+            });
+        } catch (error) {
+            return dispatch(
+                {
                     type: types.error,
-                    deletedItem: data
-                })
-            })
-            .catch(error => dispatch(
+                    msg: "Unable to select data for delete"
+                });
+        }
+        try {
+            await axios.delete(`${baseURL}${id}`);
+
+        } catch (error) {
+            return dispatch(
                 {
                     type: types.error,
                     msg: "Unable to delete data"
-                }));
-
-    };
-};
-//modify data
-export const modifyData = (id) => {
-    return (dispatch) => {
-        return axios.put(`${baseURL}${id}`)
-            .then(response => {
-                return response.data
-            })
-            .then(data => {
-                dispatch({
-                    type: types.modify,
-                    data: data
-                })
-            })
-            .catch(error => dispatch(
-                {
-                    type: types.error,
-                    msg: "Unable to modify data"
-                }));
-    };
-};
-//create data
-export const createData = (newId, newName, newCost, newDepartmentName, newCategoryName) => {
-    return (dispatch) => {
-        return axios.post(baseURL, {
-            newId,
-            newName,
-            newCost,
-            newDepartmentName,
-            newCategoryName
-        })
-            .then(response => {
-                return response.data
-            })
-            .then(data => {
-                dispatch({
-                    type: types.modify,
-                    data: data
-                })
-            })
-            .catch(error => dispatch(
-                {
-                    type: types.error,
-                    msg: "Unable to create data"
-                }));
+                });
+        }
+        dispatch(fetchData())
     };
 };

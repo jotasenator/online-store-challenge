@@ -1,6 +1,6 @@
 import { axiosCliente } from "../config/axios";
 
-export const retrieveItemDB = async () => (
+export const retrieveItemsDB = async () => (
     await axiosCliente.get('/item')
 )
 
