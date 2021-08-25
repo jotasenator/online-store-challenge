@@ -85,7 +85,7 @@ export const modifyItem = (id, dataModified) => {
 
 
 //create item
-export const modifyItem = (id, dataModified) => {
+export const modifycreateItem = (id, dataModified) => {
     return async (dispatch) => {
         try {
             const response = await axios.get(`${baseURL}${id}`, dataModified);
