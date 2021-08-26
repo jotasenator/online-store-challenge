@@ -339,6 +339,363 @@
           "id": 3
         }
       ]
+    },
+    {
+      "id": 21,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 12321,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 12322,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 12323,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 1232112,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 1232113,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 435,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 120000,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 1231,
+      "name": "",
+      "cost": 0,
+      "department": [
+        {
+          "name": "",
+          "identification": ""
+        }
+      ],
+      "category": [
+        {
+          "name": "",
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 2090,
+      "name": "maykel",
+      "cost": 12,
+      "department": [
+        {
+          "name": "creo",
+          "identification": "que "
+        }
+      ],
+      "category": [
+        {
+          "name": "est",
+          "id": null
+        }
+      ]
+    },
+    {
+      "id": 2092,
+      "name": "maykel",
+      "cost": null,
+      "department": [
+        {
+          "name": "creo",
+          "identification": "que "
+        }
+      ],
+      "category": [
+        {
+          "name": "est",
+          "id": null
+        }
+      ]
     }
   ]
 }

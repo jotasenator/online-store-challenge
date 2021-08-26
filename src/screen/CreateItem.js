@@ -3,16 +3,16 @@ import React from 'react'
 // import { createNewItem } from '../actions/actions'
 import { useForm } from '../hooks/useForm'
 import { baseURL } from '../json-server/baseURL'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { types } from '../types/types';
 
+import Swal from 'sweetalert2'
 
 
 
 export default function CreateItem() {
 
     const dispatch = useDispatch()
-    const items = useSelector(state => state.axiosDataReducer)
 
     const [formValues, handleInputChange] = useForm({
         id: '',
@@ -35,27 +35,25 @@ export default function CreateItem() {
 
     const handleCreate = async (e) => {
         e.preventDefault()
-        await axios.post(baseURL, {
-            "id": +id,
-            "name": name,
-            "cost": +cost,
-            "department": [
-                {
-                    "name": departmentName,
-                    "identification": departmentIdentification
-                }
-            ],
-            "category": [
-                {
-                    "name": categoryName,
-                    "id": +categoryId
-                }
-            ]
-        })
-        try {
-            if (!isNaN(id)) {
-                console.log(items.data)
-
+        if (!isNaN(id) && id !== '') {
+            try {
+                await axios.post(baseURL, {
+                    "id": +id,
+                    "name": name,
+                    "cost": +cost,
+                    "department": [
+                        {
+                            "name": departmentName,
+                            "identification": departmentIdentification
+                        }
+                    ],
+                    "category": [
+                        {
+                            "name": categoryName,
+                            "id": +categoryId
+                        }
+                    ]
+                })
                 const selected = await axios.get(`${baseURL}${id}`)
                 const { data } = selected
 
@@ -63,16 +61,31 @@ export default function CreateItem() {
                     type: types.created,
                     createdItem: data
                 });
+
+            } catch (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: 'Please enter a unique ID'
+                })
+                return dispatch({
+                    type: types.error,
+                    msg: 'Unable to create new item'
+
+                })
             }
-
-        } catch (error) {
-            return dispatch({
-                type: types.error,
-                msg: 'Unable to create new item'
-
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: 'Please enter valid ID'
             })
         }
     }
+
+
 
     return (
         <div className='container bg-light'>
