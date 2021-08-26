@@ -3,5 +3,6 @@ export const types = {
     error: 'ERROR',
     selected: 'SELECTED-DATA',
     delete: 'DELETED-DATA',
-    modify: 'MODIFIED-DATA'
+    modify: 'MODIFIED-DATA',
+
 }
