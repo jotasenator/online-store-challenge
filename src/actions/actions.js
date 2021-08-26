@@ -1,6 +1,7 @@
 import axios from "axios";
 import { baseURL } from "../json-server/baseURL"
 import { types } from '../types/types'
+import Swal from "sweetalert2";
 
 
 // get items
@@ -31,8 +32,8 @@ const selectItem = (id) => {
             const response = await axios.get(`${baseURL}${id}`);
             const data = response.data;
             dispatch({
-                type: types.delete,
-                deletedItem: data
+                type: types.selected,
+                selectedItem: data
             });
         } catch (error) {
             return dispatch(
@@ -44,11 +45,38 @@ const selectItem = (id) => {
     };
 }
 
+const sweetAlertConfirmDeleteItem = (id, dispatch) => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    })
+        .then((result) => {
+            if (result.isConfirmed) {
+                axios.delete(`${baseURL}${id}`);
+                dispatch({
+                    type: types.delete,
+                    deletedItem: 'Item deleted'
+                })
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
+}
+
 export const getItemDeleteGetItems = (id) => {
     return async (dispatch) => {
-        dispatch(selectItem(id))
+
         try {
-            await axios.delete(`${baseURL}${id}`);
+            dispatch(selectItem(id))
+            sweetAlertConfirmDeleteItem(id, dispatch)
 
         } catch (error) {
             return dispatch(
@@ -57,7 +85,6 @@ export const getItemDeleteGetItems = (id) => {
                     msg: "Unable to delete item"
                 });
         }
-        dispatch(getItems())
     };
 };
 

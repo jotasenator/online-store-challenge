@@ -2,7 +2,8 @@ import { types } from "../types/types";
 
 const initialState = {
     data: null,
-    deleted: null,
+    selected: null,
+    deleted: '',
     modified: null,
     error: ''
 }
@@ -13,6 +14,11 @@ export const axiosDataReducer = (state = initialState, action) => {
             return {
                 ...state,
                 data: action.data
+            }
+        case types.selected:
+            return {
+                ...state,
+                selected: action.selectedItem
             }
         case types.delete:
             return {
