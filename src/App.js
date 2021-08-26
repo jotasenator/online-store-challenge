@@ -1,6 +1,6 @@
 
 
-import Table from './components/Table'
+import Table from './screen/Table'
 
 function App() {
   return (

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getItems } from '../actions/actions';
-import ButtonCreate from './buttons/ButtonCreate';
-import ButtonDelete from './buttons/ButtonDelete';
-import ButtonUpdate from './buttons/ButtonUpdate';
+import ButtonCreate from '../components/buttons/ButtonCreate';
+import ButtonDelete from '../components/buttons/ButtonDelete';
+import ButtonUpdate from '../components/buttons/ButtonUpdate';
 
 export default function Tabla() {
     const dispatch = useDispatch()
