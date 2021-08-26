@@ -106,7 +106,7 @@ export const modifyItem = (id, dataModified) => {
                     msg: "Unable to modify item"
                 });
         }
-        dispatch(getItems())
+
     };
 };
 
@@ -128,6 +128,6 @@ export const modifycreateItem = (id, dataModified) => {
                     msg: "Unable to modify item"
                 });
         }
-        dispatch(getItems())
+
     };
 };
