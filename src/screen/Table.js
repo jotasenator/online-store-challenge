@@ -7,7 +7,9 @@ import ButtonUpdate from '../components/buttons/ButtonUpdate'
 
 export default function Table() {
     const dispatch = useDispatch()
+
     const { data } = useSelector(state => state.axiosDataReducer)
+
 
     useEffect(() => {
 
@@ -38,7 +40,7 @@ export default function Table() {
                             <tr key={x.id}>
                                 <th scope="col">{index + 1}</th>
                                 <th scope="col">{x.name}</th>
-                                <th scope="col">$ {x.cost.toFixed(2)}</th>
+                                <th scope="col">$ {x.cost?.toFixed(2)}</th>
                                 <th className='text-center'>
                                     {
                                         x.category.map((y, index) => (

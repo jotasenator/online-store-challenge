@@ -1,10 +1,19 @@
 import axios from 'axios'
 import React from 'react'
+// import { createNewItem } from '../actions/actions'
 import { useForm } from '../hooks/useForm'
 import { baseURL } from '../json-server/baseURL'
+import { useDispatch, useSelector } from 'react-redux';
+import { types } from '../types/types';
+
+
 
 
 export default function CreateItem() {
+
+    const dispatch = useDispatch()
+    const items = useSelector(state => state.axiosDataReducer)
+
     const [formValues, handleInputChange] = useForm({
         id: '',
         name: '',
@@ -43,9 +52,27 @@ export default function CreateItem() {
                 }
             ]
         })
+        try {
+            if (!isNaN(id)) {
+                console.log(items.data)
+
+                const selected = await axios.get(`${baseURL}${id}`)
+                const { data } = selected
+
+                dispatch({
+                    type: types.created,
+                    createdItem: data
+                });
+            }
+
+        } catch (error) {
+            return dispatch({
+                type: types.error,
+                msg: 'Unable to create new item'
+
+            })
+        }
     }
-
-
 
     return (
         <div className='container bg-light'>
@@ -111,10 +138,6 @@ export default function CreateItem() {
                     Create New Item
                 </button>
             </form>
-
-
-
-
         </div>
     )
 }

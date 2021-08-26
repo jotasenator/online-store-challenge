@@ -4,6 +4,7 @@ const initialState = {
     data: null,
     selected: null,
     deleted: '',
+    created: null,
     modified: null,
     error: ''
 }
@@ -25,10 +26,10 @@ export const axiosDataReducer = (state = initialState, action) => {
                 ...state,
                 deleted: action.deletedItem
             }
-        case types.modify:
+        case types.created:
             return {
                 ...state,
-                modified: action.modifiedItem
+                created: action.createdItem
             }
 
         case types.error:
