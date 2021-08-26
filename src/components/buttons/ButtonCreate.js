@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 export default function ButtonCreate() {
 
     const handleCreate = () => {
-        alert('Create')
+        alert('create')
     }
     return (
         <div>

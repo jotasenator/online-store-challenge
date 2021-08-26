@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getItems } from '../actions/actions';
 import ButtonCreate from '../components/buttons/ButtonCreate';
 import ButtonDelete from '../components/buttons/ButtonDelete';
-import ButtonUpdate from '../components/buttons/ButtonUpdate';
+import ButtonUpdate from '../components/buttons/ButtonUpdate'
 
-export default function Tabla() {
+export default function Table() {
     const dispatch = useDispatch()
     const { data } = useSelector(state => state.axiosDataReducer)
 
