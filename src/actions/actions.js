@@ -67,16 +67,21 @@ const sweetAlertConfirmDeleteItem = (id, dispatch) => {
                     'Your file has been deleted.',
                     'success'
                 )
+                setTimeout(() => {
+                    window.location.replace('')
+                }, 1000)
             }
         })
 }
 
 export const getItemDeleteGetItems = (id) => {
+
     return async (dispatch) => {
 
         try {
             dispatch(selectItem(id))
             sweetAlertConfirmDeleteItem(id, dispatch)
+
 
         } catch (error) {
             return dispatch(

@@ -6,7 +6,7 @@ import { baseURL } from '../json-server/baseURL'
 import { useDispatch } from 'react-redux';
 import { types } from '../types/types';
 
-import { Link } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 import Swal from 'sweetalert2'
 
@@ -15,6 +15,7 @@ import Swal from 'sweetalert2'
 export default function CreateItem() {
 
     const dispatch = useDispatch()
+    const history = useHistory()
 
     const [formValues, handleInputChange] = useForm({
         id: '',
@@ -66,10 +67,12 @@ export default function CreateItem() {
 
                 Swal.fire({
                     icon: 'success',
-                    title: 'Your item has been modified',
+                    title: 'Your new item has been created',
                     showConfirmButton: false,
                     timer: 1500
                 })
+
+                history.push('/')
 
             } catch (error) {
                 Swal.fire({

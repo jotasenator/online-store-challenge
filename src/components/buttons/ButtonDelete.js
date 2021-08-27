@@ -6,11 +6,15 @@ export default function ButtonDelete({ id }) {
 
     const dispatch = useDispatch()
 
+    const handleDelete = () => {
+        dispatch(getItemDeleteGetItems(id))
+    }
+
     return (
         <div>
             <button
                 className='btn btn-danger'
-                onClick={() => dispatch(getItemDeleteGetItems(id))}
+                onClick={handleDelete}
             >
                 Delete
             </button>
