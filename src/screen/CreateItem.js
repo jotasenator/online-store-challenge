@@ -6,6 +6,8 @@ import { baseURL } from '../json-server/baseURL'
 import { useDispatch } from 'react-redux';
 import { types } from '../types/types';
 
+import { Link } from 'react-router-dom'
+
 import Swal from 'sweetalert2'
 
 
@@ -61,6 +63,13 @@ export default function CreateItem() {
                     type: types.created,
                     createdItem: data
                 });
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Your item has been modified',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
 
             } catch (error) {
                 Swal.fire({
@@ -154,6 +163,10 @@ export default function CreateItem() {
 
                 <button className='btn btn-success ' type=' submit'>
                     Create New Item
+                </button>
+                <button className='btn btn-danger '>
+
+                    <Link to={'/'}>Cancel</Link>
                 </button>
             </form>
         </div>
