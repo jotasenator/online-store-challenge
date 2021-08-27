@@ -3,7 +3,7 @@ import React from 'react'
 
 import { useForm } from '../hooks/useForm'
 import { baseURL } from '../json-server/baseURL'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { types } from '../types/types';
 
 import Swal from 'sweetalert2'
@@ -12,8 +12,8 @@ import Swal from 'sweetalert2'
 export default function UpdateItem(
     {
         id = 20,
-        name = 'Juan',
-        cost = 20,
+        name = 'perico',
+        cost = 1000000,
         departmentName = 'Novela',
         departmentIdentification = 'Brasilenha',
         categoryName = '9pm',
@@ -23,6 +23,26 @@ export default function UpdateItem(
 ) {
 
     const dispatch = useDispatch()
+    // const { data } = useSelector(state => state.axiosDataReducer)
+
+    // console.log(data)
+
+    // const selectedItemtoModify = data?.filter(x => x.id === id)
+
+    // console.log(selectedItemtoModify[0]?.name)
+    // console.log(selectedItemtoModify[0]?.cost)
+    // console.log(selectedItemtoModify[0]?.department[0].name)
+    // console.log(selectedItemtoModify[0]?.department[0].identification)
+    // console.log(selectedItemtoModify[0]?.category[0].name)
+    // console.log(selectedItemtoModify[0]?.category[0].id)
+
+    // const name = selectedItemtoModify[0]?.name
+    // const cost = selectedItemtoModify[0]?.cost
+    // const departmentName = selectedItemtoModify[0]?.department[0].name
+    // const departmentIdentification = selectedItemtoModify[0]?.department[0].identification
+    // const categoryName = selectedItemtoModify[0]?.category[0].name
+    // const categoryId = selectedItemtoModify[0]?.category[0].id
+
 
     const [formValues, handleInputChange] = useForm({
 
