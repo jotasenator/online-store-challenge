@@ -55,7 +55,7 @@ export default function Table() {
                                         ))
                                     }
                                 </th>
-                                <th><ButtonUpdate /></th>
+                                <th><ButtonUpdate id={x.id} /></th>
                                 <th><ButtonDelete id={x.id} /></th>
                             </tr>
                         ))

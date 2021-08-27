@@ -31,6 +31,11 @@ export const axiosDataReducer = (state = initialState, action) => {
                 ...state,
                 created: action.createdItem
             }
+        case types.modified:
+            return {
+                ...state,
+                modified: action.modifiedItem
+            }
 
         case types.error:
             return {

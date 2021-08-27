@@ -1,16 +1,18 @@
 import React from 'react'
-import { modifyItem } from '../../actions/actions'
-import { useDispatch } from 'react-redux'
 
-export default function ButtonUpdate(id, dataModified) {
 
-    const dispatch = useDispatch()
+export default function ButtonUpdate({ id }) {
+
+
+    const handleModify = () => {
+        alert(id)
+    }
 
     return (
         <div>
             <button
                 className='btn btn-primary'
-                onClick={() => dispatch(modifyItem(id, dataModified))}
+                onClick={handleModify}
             >
                 Update
             </button>

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React from 'react'
-// import { createNewItem } from '../actions/actions'
+
 import { useForm } from '../hooks/useForm'
 import { baseURL } from '../json-server/baseURL'
 import { useDispatch } from 'react-redux';
@@ -85,10 +85,8 @@ export default function CreateItem() {
         }
     }
 
-
-
     return (
-        <div className='container bg-light'>
+        <div className='container mb-5 pb-3 bg-light'>
             <form className='mt-3' onSubmit={handleCreate}>
                 <input
                     className='input mb-1 p-3'

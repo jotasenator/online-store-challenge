@@ -90,24 +90,8 @@ export const getItemDeleteGetItems = (id) => {
 
 
 //modify item
-export const modifyItem = (id, dataModified) => {
-    return async (dispatch) => {
-        try {
-            const response = await axios.get(`${baseURL}${id}`, dataModified);
-            const data = response.data;
-            dispatch({
-                type: types.modify,
-                modify: data
-            });
-        } catch (error) {
-            return dispatch(
-                {
-                    type: types.error,
-                    msg: "Unable to modify item"
-                });
-        }
+export const modifyItem = () => {
 
-    };
 };
 
 
