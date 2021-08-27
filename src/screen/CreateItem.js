@@ -93,6 +93,7 @@ export default function CreateItem() {
                 <input
                     className='input mb-1 p-3'
                     type='text'
+                    title='Id'
                     placeholder='Id'
                     name='id'
                     autoComplete='off'
@@ -101,6 +102,7 @@ export default function CreateItem() {
                 <input
                     className='input mb-1 p-3'
                     type='text'
+                    title='Name'
                     placeholder='Name'
                     name='name'
                     autoComplete='off'
@@ -109,6 +111,7 @@ export default function CreateItem() {
                 <input
                     className='input mb-1 p-3'
                     type='text'
+                    title='Cost'
                     placeholder='Cost'
                     name='cost'
                     autoComplete='off'
@@ -117,6 +120,7 @@ export default function CreateItem() {
                 <input
                     className='input mb-1 p-3'
                     type='text'
+                    title='Department Name'
                     placeholder='Department Name'
                     name='departmentName'
                     autoComplete='off'
@@ -125,6 +129,7 @@ export default function CreateItem() {
                 <input
                     className='input mb-1 p-3'
                     type='text'
+                    title='Department Identification'
                     placeholder='Department Identification'
                     name='departmentIdentification'
                     autoComplete='off'
@@ -133,6 +138,7 @@ export default function CreateItem() {
                 <input
                     className='input mb-1 p-3'
                     type='text'
+                    title='Category Name'
                     placeholder='Category Name'
                     name='categoryName'
                     autoComplete='off'
@@ -141,6 +147,7 @@ export default function CreateItem() {
                 <input
                     className='input mb-1 p-3'
                     type='text'
+                    title='Category Id'
                     placeholder='Category Id'
                     name='categoryId'
                     autoComplete='off'
