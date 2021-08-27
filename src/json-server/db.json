@@ -325,8 +325,8 @@
     },
     {
       "id": 20,
-      "name": "Pepito",
-      "cost": 20,
+      "name": "perico",
+      "cost": 1000000,
       "department": [
         {
           "name": "Novela",
@@ -336,7 +336,7 @@
       "category": [
         {
           "name": "9pm",
-          "id": 123
+          "id": 91
         }
       ]
     }

@@ -1,14 +1,11 @@
 
-import CreateItem from './screen/CreateItem'
-import Table from './screen/Table'
-import UpdateItem from './screen/UpdateItem'
+import Routes from './routes/Routes'
+
 
 function App() {
   return (
     <div className="App">
-      <Table />
-      <CreateItem />
-      <UpdateItem />
+      <Routes />
 
     </div>
   );
