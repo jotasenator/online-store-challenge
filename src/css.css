@@ -27,3 +27,9 @@ form{
     flex-direction: column;    
 }
 
+/* Link */
+button a,
+button a:hover{
+    color:white;
+    text-decoration: none;
+}
