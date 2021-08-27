@@ -25,7 +25,7 @@ export default function UpdateItem(
     const dispatch = useDispatch()
 
     const [formValues, handleInputChange] = useForm({
-        newId: id,
+
         newName: name,
         newCost: cost,
         newDepartmentName: departmentName,
@@ -35,7 +35,6 @@ export default function UpdateItem(
     })
 
     const {
-        newId,
         newName,
         newCost,
         newDepartmentName,
@@ -46,8 +45,8 @@ export default function UpdateItem(
     const handleUpdateItem = async (e) => {
         e.preventDefault()
         try {
-            await axios.put(`${baseURL}${newId}`, {
-                "id": +newId,
+            await axios.put(`${baseURL}${id}`, {
+                "id": +id,
                 "name": newName,
                 "cost": +newCost,
                 "department": [
@@ -63,7 +62,7 @@ export default function UpdateItem(
                     }
                 ]
             })
-            const modified = await axios.get(`${baseURL}${newId}`)
+            const modified = await axios.get(`${baseURL}${id}`)
             const { data } = modified
 
             dispatch({
@@ -82,7 +81,7 @@ export default function UpdateItem(
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Something went wrong!',
-                footer: 'Unable to modify item, only GOD knows why'
+                footer: 'Unable to modify item, who passes the id?'
             })
             return dispatch({
                 type: types.error,
