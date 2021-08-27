@@ -1,18 +1,14 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 export default function ButtonCreate() {
 
-    const handleCreate = () => {
-        alert('create')
-    }
+
     return (
         <div>
             <button
-                className='btn btn-success float-right'
-                onClick={handleCreate}
-            >
-                Create
+                className='btn btn-success float-right'>
+                <Link to={'/create'}>Create</Link>
             </button>
         </div>
     )
