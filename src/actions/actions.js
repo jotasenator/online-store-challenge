@@ -67,9 +67,6 @@ const sweetAlertConfirmDeleteItem = (id, dispatch) => {
                     'Your file has been deleted.',
                     'success'
                 )
-                setTimeout(() => {
-                    window.location.replace('')
-                }, 1000)
             }
         })
 }

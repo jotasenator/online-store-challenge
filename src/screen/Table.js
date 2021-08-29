@@ -16,7 +16,7 @@ export default function Table() {
         dispatch(getItems())
 
 
-    }, [dispatch])
+    }, [dispatch, data])
 
     return (
         <div className='container mt-5 mb-5'>

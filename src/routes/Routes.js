@@ -16,11 +16,9 @@ export default function Routes() {
                     <Route exact path='/create' component={CreateItem} />
                     <Route exact path='/update/:id' component={UpdateItem} />
 
-                    <Redirect to='/table' />
-
+                    <Redirect to='/' />
                 </Switch>
             </Router>
-
         </div>
     )
 }
