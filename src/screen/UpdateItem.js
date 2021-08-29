@@ -2,7 +2,8 @@ import axios from 'axios'
 import React from 'react'
 
 import { useForm } from '../hooks/useForm'
-import { baseURL } from '../json-server/baseURL'
+import { baseURL } from '../configuration/baseURL'
+
 import { useDispatch, useSelector } from 'react-redux';
 import { types } from '../types/types';
 

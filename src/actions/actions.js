@@ -1,5 +1,5 @@
 import axios from "axios";
-import { baseURL } from "../json-server/baseURL"
+import { baseURL } from "../configuration/baseURL"
 import { types } from '../types/types'
 import Swal from "sweetalert2";
 
