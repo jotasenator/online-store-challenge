@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 
 import CreateItem from '../screen/CreateItem'
-import Table from '../screen/Table'
+import { Table } from '../screen/Table'
 import UpdateItem from '../screen/UpdateItem'
 
 

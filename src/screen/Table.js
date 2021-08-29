@@ -1,22 +1,20 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { getItems } from '../actions/actions';
-import ButtonCreate from '../components/buttons/ButtonCreate';
-import ButtonDelete from '../components/buttons/ButtonDelete';
+import { useDispatch, useSelector } from 'react-redux'
+import { getItems } from '../actions/actions'
+import ButtonCreate from '../components/buttons/ButtonCreate'
+import ButtonDelete from '../components/buttons/ButtonDelete'
 import ButtonUpdate from '../components/buttons/ButtonUpdate'
 
-export default function Table() {
+export const Table = () => {
     const dispatch = useDispatch()
 
     const { data } = useSelector(state => state.axiosDataReducer)
-
+    console.log(data)
 
     useEffect(() => {
-
         dispatch(getItems())
-
-
     }, [dispatch])
+
 
     return (
         <div className='container mt-5 mb-5'>

@@ -24,6 +24,7 @@ export const axiosDataReducer = (state = initialState, action) => {
         case types.delete:
             return {
                 ...state,
+                data: state.data.filter(item => item.id !== action.deletedItem.id),
                 deleted: action.deletedItem
             }
         case types.created:

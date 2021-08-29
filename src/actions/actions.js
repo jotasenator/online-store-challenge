@@ -60,7 +60,7 @@ const sweetAlertConfirmDeleteItem = (id, dispatch) => {
                 axios.delete(`${baseURL}${id}`);
                 dispatch({
                     type: types.delete,
-                    deletedItem: 'Item deleted'
+                    deletedItem: { id }
                 })
                 Swal.fire(
                     'Deleted!',
