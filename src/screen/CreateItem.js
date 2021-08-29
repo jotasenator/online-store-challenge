@@ -163,14 +163,16 @@ export default function CreateItem() {
                     autoComplete='off'
                     value={categoryId}
                     onChange={handleInputChange} />
+                <div className='btn-row'>
 
-                <button className='btn btn-success ' type=' submit'>
-                    Create New Item
-                </button>
-                <button className='btn btn-danger '>
+                    <button className='btn btn-success ' type=' submit'>
+                        Create New Item
+                    </button>
+                    <button className='btn btn-danger '>
 
-                    <Link to={'/'}>Cancel</Link>
-                </button>
+                        <Link to={'/'}>Cancel</Link>
+                    </button>
+                </div>
             </form>
         </div>
     )

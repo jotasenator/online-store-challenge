@@ -33,3 +33,10 @@ button a:hover{
     color:white;
     text-decoration: none;
 }
+
+/*buttons in  create item  */
+.btn-row{
+    display: flex;
+    justify-content:space-between;
+    
+}

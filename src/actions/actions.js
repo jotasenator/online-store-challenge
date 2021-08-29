@@ -39,7 +39,7 @@ export const selectItem = (id) => {
             return dispatch(
                 {
                     type: types.error,
-                    msg: "Unable to select item for delete"
+                    msg: "Unable to select item"
                 });
         }
     };

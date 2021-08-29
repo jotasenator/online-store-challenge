@@ -6,43 +6,37 @@ import { baseURL } from '../configuration/baseURL'
 
 import { useDispatch, useSelector } from 'react-redux';
 import { types } from '../types/types';
+import { useHistory } from 'react-router-dom'
 
 import Swal from 'sweetalert2'
 
 
-export default function UpdateItem(
-    {
-        id = 20,
-        name = 'perico',
-        cost = 1000000,
-        departmentName = 'Novela',
-        departmentIdentification = 'Brasilenha',
-        categoryName = '9pm',
-        categoryId = 91
+export default function UpdateItem() {
 
-    }
-) {
+    const history = useHistory()
 
     const dispatch = useDispatch()
-    // const { data } = useSelector(state => state.axiosDataReducer)
+    const { selected } = useSelector(state => state.axiosDataReducer)
+    const { data } = useSelector(state => state.axiosDataReducer)
 
-    // console.log(data)
+    const id = selected?.id
 
-    // const selectedItemtoModify = data?.filter(x => x.id === id)
+    const selectedItemtoModify = data?.filter(x => x?.id === id)
+    console.log(data !== undefined && selectedItemtoModify)
 
-    // console.log(selectedItemtoModify[0]?.name)
-    // console.log(selectedItemtoModify[0]?.cost)
-    // console.log(selectedItemtoModify[0]?.department[0].name)
-    // console.log(selectedItemtoModify[0]?.department[0].identification)
-    // console.log(selectedItemtoModify[0]?.category[0].name)
-    // console.log(selectedItemtoModify[0]?.category[0].id)
+    console.log(selectedItemtoModify[0]?.name)
+    console.log(selectedItemtoModify[0]?.cost)
+    console.log(selectedItemtoModify[0]?.department[0].name)
+    console.log(selectedItemtoModify[0]?.department[0].identification)
+    console.log(selectedItemtoModify[0]?.category[0].name)
+    console.log(selectedItemtoModify[0]?.category[0].id)
 
-    // const name = selectedItemtoModify[0]?.name
-    // const cost = selectedItemtoModify[0]?.cost
-    // const departmentName = selectedItemtoModify[0]?.department[0].name
-    // const departmentIdentification = selectedItemtoModify[0]?.department[0].identification
-    // const categoryName = selectedItemtoModify[0]?.category[0].name
-    // const categoryId = selectedItemtoModify[0]?.category[0].id
+    const name = selectedItemtoModify[0]?.name
+    const cost = selectedItemtoModify[0]?.cost
+    const departmentName = selectedItemtoModify[0]?.department[0].name
+    const departmentIdentification = selectedItemtoModify[0]?.department[0].identification
+    const categoryName = selectedItemtoModify[0]?.category[0].name
+    const categoryId = selectedItemtoModify[0]?.category[0].id
 
 
     const [formValues, handleInputChange] = useForm({
@@ -96,6 +90,9 @@ export default function UpdateItem(
                 showConfirmButton: false,
                 timer: 1500
             })
+            setTimeout(() => {
+                history.push('/')
+            }, 1500);
 
         } catch (error) {
             Swal.fire({
