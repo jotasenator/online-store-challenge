@@ -4,37 +4,18 @@ import React from 'react'
 import { useForm } from '../hooks/useForm'
 import { baseURL } from '../configuration/baseURL'
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { types } from '../types/types';
 import { useHistory } from 'react-router-dom'
 
 import Swal from 'sweetalert2'
 
 
-export default function UpdateItem() {
+export default function UpdateItem({ id, name, cost, departmentName, departmentIdentification, categoryName, categoryId }) {
 
     const history = useHistory()
 
     const dispatch = useDispatch()
-    const { selected } = useSelector(state => state.axiosDataReducer)
-
-    console.log(selected)
-
-    console.log(selected?.name)
-    console.log(selected?.cost)
-    console.log(selected?.department[0].name)
-    console.log(selected?.department[0].identification)
-    console.log(selected?.category[0].name)
-    console.log(selected?.category[0].id)
-
-    const id = selected?.id
-    const name = selected?.name
-    const cost = selected?.cost
-    const departmentName = selected?.department[0].name
-    const departmentIdentification = selected?.department[0].identification
-    const categoryName = selected?.category[0].name
-    const categoryId = selected?.category[0].id
-
 
     const [formValues, handleInputChange] = useForm({
 

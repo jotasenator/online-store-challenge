@@ -9,7 +9,6 @@ export const Table = () => {
     const dispatch = useDispatch()
 
     const { data } = useSelector(state => state.axiosDataReducer)
-    console.log(data)
 
     useEffect(() => {
         dispatch(getItems())

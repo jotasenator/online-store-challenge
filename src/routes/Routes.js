@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 
 import CreateItem from '../screen/CreateItem'
 import { Table } from '../screen/Table'
-import UpdateItem from '../screen/UpdateItem'
+
+import ConditionalRenderUpdateItem from '../components/ConditionalRenderUpdateItem'
 
 
 
@@ -14,7 +15,7 @@ export default function Routes() {
                 <Switch>
                     <Route exact path='/' component={Table} />
                     <Route exact path='/create' component={CreateItem} />
-                    <Route exact path='/update/:id' component={UpdateItem} />
+                    <Route exact path='/update/:id' component={ConditionalRenderUpdateItem} />
 
                     <Redirect to='/' />
                 </Switch>
