@@ -98,7 +98,7 @@ export default function CreateItem() {
     }
 
     return (
-        <div className='container mb-5 pb-3 bg-light'>
+        <div className='container mt-5 mb-5 pb-3 bg-light'>
             <form className='mt-3' onSubmit={handleCreate}>
                 <input
                     className='input mb-1 p-3'

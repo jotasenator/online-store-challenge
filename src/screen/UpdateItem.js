@@ -17,25 +17,23 @@ export default function UpdateItem() {
 
     const dispatch = useDispatch()
     const { selected } = useSelector(state => state.axiosDataReducer)
-    const { data } = useSelector(state => state.axiosDataReducer)
+
+    console.log(selected)
+
+    console.log(selected?.name)
+    console.log(selected?.cost)
+    console.log(selected?.department[0].name)
+    console.log(selected?.department[0].identification)
+    console.log(selected?.category[0].name)
+    console.log(selected?.category[0].id)
 
     const id = selected?.id
-
-    const selectedItemtoModify = data?.filter(x => x?.id === id)
-
-    console.log(selectedItemtoModify[0]?.name)
-    console.log(selectedItemtoModify[0]?.cost)
-    console.log(selectedItemtoModify[0]?.department[0].name)
-    console.log(selectedItemtoModify[0]?.department[0].identification)
-    console.log(selectedItemtoModify[0]?.category[0].name)
-    console.log(selectedItemtoModify[0]?.category[0].id)
-
-    const name = selectedItemtoModify[0]?.name
-    const cost = selectedItemtoModify[0]?.cost
-    const departmentName = selectedItemtoModify[0]?.department[0].name
-    const departmentIdentification = selectedItemtoModify[0]?.department[0].identification
-    const categoryName = selectedItemtoModify[0]?.category[0].name
-    const categoryId = selectedItemtoModify[0]?.category[0].id
+    const name = selected?.name
+    const cost = selected?.cost
+    const departmentName = selected?.department[0].name
+    const departmentIdentification = selected?.department[0].identification
+    const categoryName = selected?.category[0].name
+    const categoryId = selected?.category[0].id
 
 
     const [formValues, handleInputChange] = useForm({
@@ -77,11 +75,11 @@ export default function UpdateItem() {
                 ]
             })
             const modified = await axios.get(`${baseURL}${id}`)
-            const { data } = modified
+            const { selected } = modified
 
             dispatch({
                 type: types.modify,
-                modifiedItem: data
+                modifiedItem: selected
             });
             Swal.fire({
                 icon: 'success',
@@ -108,7 +106,7 @@ export default function UpdateItem() {
     }
 
     return (
-        <div className='container mb-5 pb-3 bg-light'>
+        <div className='container mt-5 mb-5 pb-3 bg-light'>
             <form className='mt-3' onSubmit={handleUpdateItem}>
 
                 <input
