@@ -7,7 +7,7 @@ export default function ButtonCreate() {
     return (
         <div>
             <button
-                className='btn btn-success float-right'>
+                className='btn btn-primary float-right'>
                 <Link to={'/create'}>Create</Link>
             </button>
         </div>

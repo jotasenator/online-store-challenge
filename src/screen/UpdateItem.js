@@ -22,7 +22,6 @@ export default function UpdateItem() {
     const id = selected?.id
 
     const selectedItemtoModify = data?.filter(x => x?.id === id)
-    console.log(data !== undefined && selectedItemtoModify)
 
     console.log(selectedItemtoModify[0]?.name)
     console.log(selectedItemtoModify[0]?.cost)
