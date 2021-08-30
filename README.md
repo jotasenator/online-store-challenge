@@ -16,7 +16,7 @@ You will also see any lint errors in the console.
 
 ### `json-server --watch db.json --port 3001`
 Loads db.json and start server.\
-Open (http://localhost:3001) and (http://localhost:3001/item) to view server data in the browser.
+Open (http://localhost:3001/item) to view server data in the browser.
 
 ### `yarn test`
 
