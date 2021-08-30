@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useSelector } from 'react-redux';
-import UpdateItem from '../screen/UpdateItem';
+import UpdateItem from './UpdateItem';
 
 
 export default function ConditionalRenderUpdateItem() {

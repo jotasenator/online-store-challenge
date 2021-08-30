@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 import CreateItem from '../screen/CreateItem'
 import { Table } from '../screen/Table'
 
-import ConditionalRenderUpdateItem from '../components/ConditionalRenderUpdateItem'
+import ConditionalRenderUpdateItem from '../screen/ConditionalRenderUpdateItem'
 
 
 

@@ -68,6 +68,7 @@ export default function UpdateItem({ id, name, cost, departmentName, departmentI
                 showConfirmButton: false,
                 timer: 1500
             })
+
             setTimeout(() => {
                 history.push('/')
             }, 1500);
