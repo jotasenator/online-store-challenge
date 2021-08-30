@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { useForm } from '../hooks/useForm'
 import { baseURL } from '../configuration/baseURL'
@@ -17,7 +17,7 @@ export default function UpdateItem({ id, name, cost, departmentName, departmentI
 
     const dispatch = useDispatch()
 
-    const [formValues, handleInputChange] = useForm({
+    const [formValues, handleInputChange, reset] = useForm({
 
         newName: name,
         newCost: cost,
@@ -26,6 +26,12 @@ export default function UpdateItem({ id, name, cost, departmentName, departmentI
         newCategoryName: categoryName,
         newCategoryId: categoryId
     })
+
+    useEffect(() => {
+        reset()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [id])
+
 
     const {
         newName,
