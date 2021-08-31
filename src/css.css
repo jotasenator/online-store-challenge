@@ -40,3 +40,10 @@ button a:hover{
     justify-content:space-between;
     
 }
+
+/* skeleton */
+.head-table-skeleton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

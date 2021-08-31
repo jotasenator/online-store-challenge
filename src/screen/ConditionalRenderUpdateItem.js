@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useSelector } from 'react-redux';
+import LoadingSkeletonUpdate from '../components/skeletons/LoadingSkeletonUpdate';
 import UpdateItem from './UpdateItem';
 
 
@@ -16,17 +17,20 @@ export default function ConditionalRenderUpdateItem() {
     const categoryName = selected?.category[0].name
     const categoryId = selected?.category[0].id
     return (
-        <div>
-            {(selected !== null) &&
-                <UpdateItem
-                    id={id}
-                    name={name}
-                    cost={cost}
-                    departmentName={departmentName}
-                    departmentIdentification={departmentIdentification}
-                    categoryName={categoryName}
-                    categoryId={categoryId}
-                />}
-        </div>
+        <>
+            {!selected ? <LoadingSkeletonUpdate /> :
+                <div>
+                    {(selected !== null) &&
+                        <UpdateItem
+                            id={id}
+                            name={name}
+                            cost={cost}
+                            departmentName={departmentName}
+                            departmentIdentification={departmentIdentification}
+                            categoryName={categoryName}
+                            categoryId={categoryId}
+                        />}
+                </div >}
+        </>
     )
 }
