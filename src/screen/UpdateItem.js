@@ -1,14 +1,12 @@
-import axios from 'axios'
 import React, { useEffect } from 'react'
 
 import { useForm } from '../hooks/useForm'
-import { baseURL } from '../configuration/baseURL'
 
 import { useDispatch } from 'react-redux';
-import { types } from '../redux/types/types';
+
 import { useHistory } from 'react-router-dom'
 
-import Swal from 'sweetalert2'
+import { modifyItem } from '../actions/actions';
 
 
 export default function UpdateItem({ id, name, cost, departmentName, departmentIdentification, categoryName, categoryId }) {
@@ -30,7 +28,7 @@ export default function UpdateItem({ id, name, cost, departmentName, departmentI
     useEffect(() => {
         reset()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [id])
+    }, [id, name, cost, departmentName, departmentIdentification, categoryName, categoryId])
 
 
     const {
@@ -41,56 +39,9 @@ export default function UpdateItem({ id, name, cost, departmentName, departmentI
         newCategoryName,
         newCategoryId } = formValues
 
-    const handleUpdateItem = async (e) => {
+    const handleUpdateItem = (e) => {
         e.preventDefault()
-        try {
-            await axios.put(`${baseURL}${id}`, {
-                "id": +id,
-                "name": newName,
-                "cost": +newCost,
-                "department": [
-                    {
-                        "name": newDepartmentName,
-                        "identification": newDepartmentIdentification
-                    }
-                ],
-                "category": [
-                    {
-                        "name": newCategoryName,
-                        "id": +newCategoryId
-                    }
-                ]
-            })
-            const modified = await axios.get(`${baseURL}${id}`)
-            const { selected } = modified
-
-            dispatch({
-                type: types.modify,
-                modifiedItem: selected
-            });
-            Swal.fire({
-                icon: 'success',
-                title: 'Your item has been modified',
-                showConfirmButton: false,
-                timer: 1500
-            })
-
-            setTimeout(() => {
-                history.push('/')
-            }, 1500);
-
-        } catch (error) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Something went wrong!',
-                footer: 'Unable to modify item, who passes the id?'
-            })
-            return dispatch({
-                type: types.error,
-                msg: 'Unable to modify item'
-            })
-        }
+        modifyItem(id, newName, newCost, newDepartmentName, newDepartmentIdentification, newCategoryName, newCategoryId, dispatch, history)
     }
 
     return (

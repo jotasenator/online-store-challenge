@@ -92,7 +92,55 @@ export const getItemDeleteGetItems = (id) => {
 
 
 //modify item
-export const modifyItem = () => {
+export const modifyItem = async (id, newName, newCost, newDepartmentName, newDepartmentIdentification, newCategoryName, newCategoryId, dispatch, history) => {
+    try {
+        await axios.put(`${baseURL}${id}`, {
+            "id": +id,
+            "name": newName,
+            "cost": +newCost,
+            "department": [
+                {
+                    "name": newDepartmentName,
+                    "identification": newDepartmentIdentification
+                }
+            ],
+            "category": [
+                {
+                    "name": newCategoryName,
+                    "id": +newCategoryId
+                }
+            ]
+        })
+        const modified = await axios.get(`${baseURL}${id}`)
+        const { selected } = modified
+
+        dispatch({
+            type: types.modify,
+            modifiedItem: selected
+        });
+        Swal.fire({
+            icon: 'success',
+            title: 'Your item has been modified',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+        setTimeout(() => {
+            history.push('/')
+        }, 1500);
+
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: 'Unable to modify item, who passes the id?'
+        })
+        return dispatch({
+            type: types.error,
+            msg: 'Unable to modify item'
+        })
+    }
 
 };
 
