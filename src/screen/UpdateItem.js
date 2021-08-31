@@ -5,7 +5,7 @@ import { useForm } from '../hooks/useForm'
 import { baseURL } from '../configuration/baseURL'
 
 import { useDispatch } from 'react-redux';
-import { types } from '../types/types';
+import { types } from '../redux/types/types';
 import { useHistory } from 'react-router-dom'
 
 import Swal from 'sweetalert2'

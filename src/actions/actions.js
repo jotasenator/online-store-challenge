@@ -1,6 +1,6 @@
 import axios from "axios";
 import { baseURL } from "../configuration/baseURL"
-import { types } from '../types/types'
+import { types } from '../redux/types/types'
 import Swal from "sweetalert2";
 
 

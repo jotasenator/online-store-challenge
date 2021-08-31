@@ -4,7 +4,7 @@ import React from 'react'
 import { useForm } from '../hooks/useForm'
 import { baseURL } from '../configuration/baseURL'
 import { useDispatch } from 'react-redux';
-import { types } from '../types/types';
+import { types } from '../redux/types/types';
 
 import { useHistory, Link } from 'react-router-dom'
 
