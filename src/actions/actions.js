@@ -98,7 +98,64 @@ export const modifyItem = () => {
 
 
 //create item
-export const createNewItem = () => {
+export const createNewItem = async (id, name, cost, departmentName, departmentIdentification, categoryName, categoryId, dispatch, history) => {
+    if (!isNaN(id) && id !== '') {
+        try {
+            await axios.post(baseURL, {
+                "id": +id,
+                "name": name,
+                "cost": +cost,
+                "department": [
+                    {
+                        "name": departmentName,
+                        "identification": departmentIdentification
+                    }
+                ],
+                "category": [
+                    {
+                        "name": categoryName,
+                        "id": +categoryId
+                    }
+                ]
+            })
+            const selected = await axios.get(`${baseURL}${id}`)
+            const { data } = selected
+
+            dispatch({
+                type: types.created,
+                createdItem: data
+            });
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Your new item has been created',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+            history.push('/')
+
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: 'Please enter a unique ID'
+            })
+            return dispatch({
+                type: types.error,
+                msg: 'Unable to create new item'
+
+            })
+        }
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: 'Please enter valid ID'
+        })
+    }
 
 };
 

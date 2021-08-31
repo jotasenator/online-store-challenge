@@ -1,14 +1,15 @@
-import axios from 'axios'
+
 import React from 'react'
 
 import { useForm } from '../hooks/useForm'
-import { baseURL } from '../configuration/baseURL'
+
 import { useDispatch } from 'react-redux';
-import { types } from '../redux/types/types';
+
 
 import { useHistory, Link } from 'react-router-dom'
 
-import Swal from 'sweetalert2'
+
+import { createNewItem } from '../actions/actions';
 
 
 
@@ -36,65 +37,10 @@ export default function CreateItem() {
         categoryName,
         categoryId } = formValues
 
-    const handleCreate = async (e) => {
+    const handleCreate = (e) => {
         e.preventDefault()
-        if (!isNaN(id) && id !== '') {
-            try {
-                await axios.post(baseURL, {
-                    "id": +id,
-                    "name": name,
-                    "cost": +cost,
-                    "department": [
-                        {
-                            "name": departmentName,
-                            "identification": departmentIdentification
-                        }
-                    ],
-                    "category": [
-                        {
-                            "name": categoryName,
-                            "id": +categoryId
-                        }
-                    ]
-                })
-                const selected = await axios.get(`${baseURL}${id}`)
-                const { data } = selected
+        createNewItem(id, name, cost, departmentName, departmentIdentification, categoryName, categoryId, dispatch, history)
 
-                dispatch({
-                    type: types.created,
-                    createdItem: data
-                });
-
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Your new item has been created',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-
-                history.push('/')
-
-            } catch (error) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Something went wrong!',
-                    footer: 'Please enter a unique ID'
-                })
-                return dispatch({
-                    type: types.error,
-                    msg: 'Unable to create new item'
-
-                })
-            }
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Something went wrong!',
-                footer: 'Please enter valid ID'
-            })
-        }
     }
 
     return (
