@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot from <App/> should render <App/> correctly 1`] = `
+<div
+  className="App"
+>
+  <Routes />
+</div>
+`;
+
+exports[`Snapshot from the app should render <App/> correctly 1`] = `
+<div
+  className="App"
+>
+  <Routes />
+</div>
+`;
