@@ -5,13 +5,11 @@ exports[`Test from ButtonCreate should render <ButtonCreate/> correctly 1`] = `
   <button
     className="btn btn-primary float-right"
   >
-    <BrowserRouter>
-      <Link
-        to="/create"
-      >
-        Create
-      </Link>
-    </BrowserRouter>
+    <Link
+      to="/create"
+    >
+      Create
+    </Link>
   </button>
 </div>
 `;
