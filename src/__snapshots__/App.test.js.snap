@@ -7,11 +7,3 @@ exports[`Snapshot from <App/> should render <App/> correctly 1`] = `
   <Routes />
 </div>
 `;
-
-exports[`Snapshot from the app should render <App/> correctly 1`] = `
-<div
-  className="App"
->
-  <Routes />
-</div>
-`;

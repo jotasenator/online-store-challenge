@@ -8,7 +8,7 @@ export default function LoadingSkeletonTable() {
         <div className='container mt-5 mb-5 pt-5 pb-5 '>
 
             <div className='head-table-skeleton'>
-                <div><Skeleton width={80} height={40} /></div>
+                <div className='test-skeleton'><Skeleton width={80} height={40} /></div>
                 <div><Skeleton width={80} height={40} /></div>
                 <div><Skeleton width={80} height={40} /></div>
                 <div><Skeleton width={80} height={40} /></div>

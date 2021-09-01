@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot from LoadingSkeletonUpdate should render <LoadingSkeletonUpdate/> correctly 1`] = `
+<div
+  className="container mt-5 mb-5 pt-3 pb-3 "
+>
+  <Skeleton
+    circle={false}
+    count={6}
+    delay={0}
+    duration={1.2}
+    height={60}
+    width={null}
+    wrapper={null}
+  />
+  <div
+    className="head-table-skeleton"
+  >
+    <div>
+      <Skeleton
+        circle={false}
+        count={1}
+        delay={0}
+        duration={1.2}
+        height={40}
+        width={210}
+        wrapper={null}
+      />
+    </div>
+  </div>
+</div>
+`;
