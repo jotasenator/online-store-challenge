@@ -27,11 +27,5 @@ describe('LoadingSkeletonTable test', () => {
     test('should show me what is inside className=head-table-skeleton', () => {
         expect(wrapper.find('.head-table-skeleton').text()).toBe('<Skeleton /><Skeleton /><Skeleton /><Skeleton /><Skeleton /><Skeleton /><Skeleton />')
     })
-    test('should show me what is inside className=test-skeleton', () => {
-
-
-    })
-
-
 
 })
