@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot from ButtonCreate should render <ButtonCreate/> correctly 1`] = `
+<div>
+  <button
+    className="btn btn-primary float-right"
+  >
+    <BrowserRouter>
+      <Link
+        to="/create"
+      >
+        Create
+      </Link>
+    </BrowserRouter>
+  </button>
+</div>
+`;
