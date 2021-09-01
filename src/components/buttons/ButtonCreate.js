@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function ButtonCreate() {
 
@@ -8,9 +8,7 @@ export default function ButtonCreate() {
         <div>
             <button
                 className='btn btn-primary float-right'>
-                <BrowserRouter>
-                    <Link to={'/create'}>Create</Link>
-                </BrowserRouter>
+                <Link to={'/create'}>Create</Link>
             </button>
         </div>
     )
