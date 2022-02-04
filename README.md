@@ -17,6 +17,10 @@ You will also see any lint errors in the console.
 ### `first json-server requires at least version 12 of Node, please upgrade`
 ### `npm install -g json-server`
 second install json-server globally
+download the db.json file to your pc
+go to folder where it lays
+open the console in this adress
+then
 ### `json-server --watch db.json --port 3001`
 Loads db.json and start server.\
 Open (http://localhost:3001/item) to view server data in the browser.
